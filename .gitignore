@@ -1,0 +1,10 @@
+*.*
+!.gitignore
+/__pycache__
+/build
+!/*.py
+!/*.ui
+!/*.data
+/dist/*
+!/dist/main.exe
+
