@@ -92,18 +92,21 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
             dailog.show()
         else:
             QMessageBox.critical(self, 'ERROE', '未选中联系人！')
-
+# TODO: 完善搜索功能，考虑使用列表搜索还是表格搜索
     def search(self):
-        print('search')
-        choose = self.comboBox.currentText()
-        if choose == '按姓名':
-            print('按姓名')
-        elif choose == '按电话':
-            print('按电话')
-        elif choose == '按邮箱':
-            print('按邮箱')
+        list = create.example.get_data()
+        if list:
+            choose = self.comboBox.currentText()
+            if choose == '按姓名':
+                for name in list:
+            elif choose == '按电话':
+                print('按电话')
+            elif choose == '按邮箱':
+                print('按邮箱')
+            else:
+                print('请选择查询方式')
         else:
-            print('请选择查询方式')
+            pass
 
 
 if __name__ == '__main__':
