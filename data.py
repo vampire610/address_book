@@ -1,23 +1,17 @@
-import pickle
+import pypinyin
 
 
+def pinyin_sort(dic):
+    sort_dic = {}
+    for name in dic.keys():
+        name_pinyin = ''
+        name_pinyin_list = pypinyin.lazy_pinyin(name)
+        for v in name_pinyin_list:
+            name_pinyin += v
+        sort_dic[name_pinyin] = [name, dic[name]]
 
-ad = {}
+    new_dic = {}
+    for pinyin in sorted(sort_dic):
+        new_dic[sort_dic[pinyin][0]] = sort_dic[pinyin][1]
 
-
-class Person:
-    def __init__(self, name, tel, email):
-        self.name = name
-        self.tel = tel
-        self.email = email
-
-
-while 1:
-    print('请输入姓名，等信息')
-    name = input('姓名')
-    tel = input('tel')
-    email = input('email')
-    ad[name] = Person(name, tel, email)
-
-    for v in ad.values():
-        print(v.name)
+    return new_dic

@@ -1,6 +1,6 @@
 import pickle
 import os
-import pypinyin
+import data
 
 datafile = 'person.data'
 line = '======================================='
@@ -35,7 +35,8 @@ def dic_sort(dic):
     if dic:
         for v in sorted(dic):
             sort_dic[v] = dic[v]
-        return sort_dic
+        
+        return data.pinyin_sort(sort_dic)
     else:
         return dic
 
