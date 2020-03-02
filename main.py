@@ -33,7 +33,7 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
 
     def display(self):
         personList = create.example.get_data()
-
+        
         if personList:
 
             r = len(personList)
@@ -101,7 +101,7 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
         if list:
             choose = self.comboBox.currentText()
             if choose == '按姓名':
-                pass
+                pass 
             elif choose == '按电话':
                 print('按电话')
             elif choose == '按邮箱':
