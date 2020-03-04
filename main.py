@@ -6,6 +6,9 @@ from PyQt5.QtWidgets import *
 import Ui_book
 import create
 import change
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+
 
 personList = {}
 
@@ -33,7 +36,7 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
 
     def display(self):
         personList = create.example.get_data()
-        
+
         if personList:
 
             r = len(personList)
@@ -95,21 +98,22 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
             dailog.show()
         else:
             QMessageBox.critical(self, 'ERROE', '未选中联系人！')
-# TODO: 完善搜索功能，考虑使用列表搜索还是表格搜索
+
     def search(self):
         list = create.example.get_data()
         if list:
-            choose = self.comboBox.currentText()
-            if choose == '按姓名':
-                pass 
-            elif choose == '按电话':
-                print('按电话')
-            elif choose == '按邮箱':
-                print('按邮箱')
+            search_text = self.lineEdit.text()
+            items = self.tabletable.findItems(search_text, Qt.MatchExactly)
+            if items:
+                item = items[0]
+                item.setSelected(True)
+                row = item.row()
+                self.tabletable.verticalScrollBar().setSliderPosition(row)
             else:
-                print('请选择查询方式')
+                QMessageBox.critical(self, '未找到对应信息', '未找到对应信息')
+
         else:
-            pass
+            QMessageBox.critical(self, 'ERROR', '没有数据，请添加联系人')
 
 
 if __name__ == '__main__':

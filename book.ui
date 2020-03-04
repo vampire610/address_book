@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>477</width>
+    <width>445</width>
     <height>457</height>
    </rect>
   </property>
@@ -36,27 +36,10 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,7,1">
       <item>
-       <widget class="QComboBox" name="comboBox">
-        <item>
-         <property name="text">
-          <string>请选择查询方式</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>按姓名</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>按电话</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>按邮箱</string>
-         </property>
-        </item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>请输入查询信息</string>
+        </property>
        </widget>
       </item>
       <item>
