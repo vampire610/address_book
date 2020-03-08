@@ -103,14 +103,17 @@ class My_window(QMainWindow, Ui_book.Ui_MainWindow):
         list = create.example.get_data()
         if list:
             search_text = self.lineEdit.text()
-            items = self.tabletable.findItems(search_text, Qt.MatchExactly)
-            if items:
-                item = items[0]
-                item.setSelected(True)
-                row = item.row()
-                self.tabletable.verticalScrollBar().setSliderPosition(row)
-            else:
-                QMessageBox.critical(self, '未找到对应信息', '未找到对应信息')
+            if search_text:
+                items = self.tabletable.findItems(search_text, Qt.MatchExactly)
+                if items:
+                    item = items[0]
+                    item.setSelected(True)
+                    row = item.row()
+                    self.tabletable.verticalScrollBar().setSliderPosition(row)
+                else:
+                    QMessageBox.critical(self, '未找到对应信息', '未找到对应信息')
+            else:QMessageBox.critical(self, 'ERROR', '请输入要查询信息')
+
 
         else:
             QMessageBox.critical(self, 'ERROR', '没有数据，请添加联系人')

@@ -14,6 +14,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(445, 457)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\vampi\\Desktop\\dressbook\\address-book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -88,7 +91,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "电话簿"))
         self.label.setText(_translate("MainWindow", "电话簿"))
         self.label_2.setText(_translate("MainWindow", "请输入查询信息"))
         self.pushButton_search.setText(_translate("MainWindow", "搜索"))

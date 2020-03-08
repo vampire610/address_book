@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>电话簿</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>address-book.png</normaloff>address-book.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">

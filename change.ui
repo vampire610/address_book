@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>修改联系人</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>address-book.png</normaloff>address-book.png</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

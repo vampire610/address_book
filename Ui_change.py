@@ -14,6 +14,9 @@ class Ui_Dialog_change(object):
     def setupUi(self, Dialog_change):
         Dialog_change.setObjectName("Dialog_change")
         Dialog_change.resize(250, 176)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\vampi\\Desktop\\dressbook\\address-book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog_change.setWindowIcon(icon)
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog_change)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
