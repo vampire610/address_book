@@ -6,3 +6,9 @@
 ``` bash
 $ pyinstaller -Fw main.py
 ```
+> 注:  
+> python版本： 3.6.13  
+> pyqt5  
+> pickle  
+> pypinyin  
+> designer：anaconda自带  C:\ProgramData\Anaconda3\Library\bin\designer.exe
