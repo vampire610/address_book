@@ -11,4 +11,5 @@ $ pyinstaller -Fw main.py
 > pyqt5  
 > pickle  
 > pypinyin  
+> pyinstaller 打包  
 > designer：anaconda自带  C:\ProgramData\Anaconda3\Library\bin\designer.exe
